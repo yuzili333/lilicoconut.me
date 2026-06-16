@@ -290,13 +290,6 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/posts/hello-tokyo': RouteRecordInfo<
-      '/posts/hello-tokyo',
-      '/posts/hello-tokyo',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
     '/posts/icons-in-pure-css': RouteRecordInfo<
       '/posts/icons-in-pure-css',
       '/posts/icons-in-pure-css',
@@ -468,13 +461,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/nuxt-icon-v1': RouteRecordInfo<
       '/posts/nuxt-icon-v1',
       '/posts/nuxt-icon-v1',
-      Record<never, never>,
-      Record<never, never>,
-      | never
-    >,
-    '/posts/ohayo-tokyo': RouteRecordInfo<
-      '/posts/ohayo-tokyo',
-      '/posts/ohayo-tokyo',
       Record<never, never>,
       Record<never, never>,
       | never
@@ -973,12 +959,6 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'pages/posts/hello-tokyo.md': {
-      routes:
-        | '/posts/hello-tokyo'
-      views:
-        | never
-    }
     'pages/posts/icons-in-pure-css.md': {
       routes:
         | '/posts/icons-in-pure-css'
@@ -1126,12 +1106,6 @@ declare module 'vue-router/auto-routes' {
     'pages/posts/nuxt-icon-v1.md': {
       routes:
         | '/posts/nuxt-icon-v1'
-      views:
-        | never
-    }
-    'pages/posts/ohayo-tokyo.md': {
-      routes:
-        | '/posts/ohayo-tokyo'
       views:
         | never
     }

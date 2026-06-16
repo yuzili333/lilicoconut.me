@@ -12,6 +12,10 @@ const router = useRouter()
 const route = useRoute()
 const content = ref<HTMLDivElement>()
 
+const lang = computed(() => {
+  return frontmatter?.lang ? frontmatter.lang : route.meta.frontmatter?.lang
+})
+
 const base = 'https://antfu.me'
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @antfu7\'s ${base}${route.path}\n\nI think...`)}`)
 const elkUrl = computed(() => `https://elk.zone/intent/post?text=${encodeURIComponent(`Reading @antfu@m.webtoo.ls\'s ${base}${route.path}\n\nI think...`)}`)
@@ -96,7 +100,7 @@ const ArtComponent = computed(() => {
   <div
     v-if="frontmatter.display ?? frontmatter.title"
     class="prose m-auto mb-8"
-    :lang="frontmatter.lang"
+    :lang="lang"
     :class="[frontmatter.wrapperClass]"
   >
     <h1 class="mb-0 slide-enter-50">
@@ -132,7 +136,7 @@ const ArtComponent = computed(() => {
   </div>
   <article
     ref="content"
-    :lang="frontmatter.lang"
+    :lang="lang"
     :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]"
   >
     <slot />
